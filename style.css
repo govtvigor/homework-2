@@ -4,6 +4,8 @@
 }
 .own-image {
     height: 250px;
+    border: 2px solid #BBEEDF;
+    padding: 10px;
 }
 main {
     font-size: 20px;
@@ -34,4 +36,13 @@ a:hover {
 }
 .skills-list {
     list-style-type: square;
+}
+.bottom-underline {
+    border-bottom: 2px solid #BBEEDF;
+}
+.background-table-header {
+    background-color: #BBEEDF;
+}
+.background-table-main-columns {
+    background-color: #DFEBE7;
 }
