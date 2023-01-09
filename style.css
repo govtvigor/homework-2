@@ -1,9 +1,10 @@
 .black-line {
     background-color: black;
-    height: 5px;
+    height: 3px;    
 }
 .own-image {
-    height: 250px;
+    height: 100px;
+    width: 100px;
     border: 2px solid #BBEEDF;
     padding: 10px;
 }
@@ -45,4 +46,12 @@ a:hover {
 }
 .background-table-main-columns {
     background-color: #DFEBE7;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.work-experience-table {
+    width: 100%;
 }
