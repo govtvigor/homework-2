@@ -8,68 +8,112 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <hr class="black-line">
-    <header>
-        <div class="header">
-        <div class="header-my-info">
-            <p><h1 class="my-name bottom-underline">Igor Govtvian</h1></p>
-            <br>
-            <p class="my-position bottom-underline">Junior Frontend Developer, student</p>
-            <br>
-            <h2><a href="contact.html">Offer a job</a></h2>
+    <div class="container">
+        <div class="left-side-block">
+            <div class="name">
+                <span class="my-name">Igor</span> <br>
+                <span class="my-surname">Govtvian</span>
+            </div>
+            <div class="cv-photo">
+                <img src="my-foto.jpg" class="cv-image">
+            </div>
+            <div class="contact-block">
+                
+                    <span class="caption-contact">Contact</span>
+                    <hr class="black-line">
+                
+
+                <div class="contact-details">
+                    <span class="caption-contact-details">Address</span>
+                    <p class="text-contact-details">
+                        Prague, Czech Republic
+                    </p>
+                </div>
+
+                <div class="contact-details">
+                    <span class="caption-contact-details">Phone</span>
+                    <p class="text-contact-details">+420608619909</p>
+                </div>
+
+                <div class="contact-details">
+                    <span class="caption-contact-details">E-mail</span>
+                    <p class="text-contact-details" style="color: #1C2E8C">govtvianigor@gmail.com</p>
+                </div>
+
+                <div class="contact-details">
+                    <span class="caption-contact-details">Twitter</span>
+                    <p class="text-contact-details" style="color: #1C2E8C">https://twitter.com/IGovtvan</p>
+                </div>
+            </div>
+
+            <div class="languages-block">
+                <span class="caption-languages">Languages</span>
+                <hr class="black-line">
+
+                <ul class="name-of-language">
+                    <li class="text-name-language">Ukranian - C2</li>
+                    <li class="text-name-language">English - B2</li>
+                    <li class="text-name-language">Czech - A2</li>
+                </ul>
+            </div>
         </div>
-        <div class="header-photo">
-            <img src="my-foto.jpg" alt="my-photo" class="own-image">
-        </div>
-        </div>
-    </header>
-    <main>
-    <h2>Work experience</h2>
-    <table border="2" cellspacing="0" cellpadding="10px" class="work-experience-table">
-       
-        <thead>
-            <tr>
-                <th class="captions-in-table background-table-header">Period:</th>
-                <th class="captions-in-table background-table-header">Position</th>
-            </tr>
+
+        <div class="right-side-block">
+            <div class="summary-block">
+                <span class="caption-summary">
+                    Summary
+                </span>
+                <hr class="another-black-line">
+                <p class="summary-text">
+                    I am student, studying on Faculty of Informational Technologies. I studied C, C++, little Python and took courses from Frontend Developing in the past.
+                    I also worked as freelancer on Fiverr.
+                </p>
+
+            </div>
+
+            <div class="skills-block summary-block">
+                <span class="caption-skills-block caption-summary">
+                    Skills Highlights 
+                </span>
+                <hr class="another-black-line">
+
+                <div class="name-of-skills">
+                    <ul class="list-of-skills">
+                        <li class="item-skills">HTML</li>
+                        <li class="item-skills">CSS</li>
+                        <li class="item-skills">JavaScript</li>
+                        <li class="item-skills">React</li>
+                    </ul>
+                    <ul class="list-of-skills">
+                        <li class="item-skills">Redux</li>
+                        <li class="item-skills">Figma</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="work-experience-block ">
+                <span class="caption-summary usual-font-style">
+                    Work Experience
+                </span>
+                <hr class="another-black-line">
+                <div class="about-experience">
+                    <p><span class="usual-font-style"> Name of employer:</span> Fiver <br>
+                        <span class="usual-font-style"> Dates of employment: </span> 04/2020 - 06/2020 <br>
+                        <span class="usual-font-style">Job title:</span> Frontend Developer <br>
+                        <span class="usual-font-style">Project/Role description:</span> Development and fixing a web page if it is needed after the website is done. Website was about selling bottles of waters and water pumps and other utilities, which are related to the water.
+                </div>
+            </div>
             
-        </thead>
-        <tbody>
-            <tr>
-                <td class="background-table-main-columns">2019</td>
-                <td class="background-table-main-columns">Working on freelance <a href="https://www.fiverr.com">Fiverr</a> </td> 
-            </tr>
-            <tr>
-                <td rowspan="2" class="background-table-header"><strong>Description</strong></td>
-                <td class="background-table-main-columns">
-                    Created few simple websites for customers.
-                </td>
-                
-                
-            </tr>
-            <tr class="background-table-main-columns">
-                <td>Met nice people</td>
-            </tr>
-        </tbody>
-    </table>
+            <div class="education-block">
+                <span class="caption-summary usual-font-style">Education</span>
+                <hr class="another-black-line">
+                <div class="education-about">
+                    <span class="usual-font-style">Dates of studying:</span> from 2020 - present<br>
+                    <span class="usual-font-style">Name of institution:</span> Czech Technical University <br>
+                    <span class="usual-font-style">Degree and major:</span> Still studying
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <h2>Skills: </h2>
-
-        <ul class="skills-list bottom-underline">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-
-        
-        <h2>Achievements: </h2>
-        <ol class="bottom-underline">
-            <li>Joined the Czech Technical University</li>
-            <li>Tried to make with my brother a group in Instagram, where people could order a website</li>
-            <li>Unfortunately, it failed</li>
-        </ol>
-
-    </main>
 </body>
 </html>
