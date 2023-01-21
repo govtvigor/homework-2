@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact information</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <h1>Hire me</h1>
     <br />
     <h2>Contact information</h2>
 
-    <table border="2" cellpadding="10px" cellspacing="0">
+    <table border="2" cellpadding="10px" cellspacing="0" class="main-block">
         <tbody>
             <tr>
                 <td><strong>Phone</strong></td>
@@ -24,22 +25,25 @@
         </tbody>
     </table>
 
-    <form action="/contact.html">
+    <form action="mailto:govtvianigor@gmail.com" method="get">
 
         <fieldset>
             <legend>Contact form</legend>
             <table>
             <tr>
                 <td>
-                    <label for="email">Email:</label>
+                    <label for="email">Email:</label> <span class="red-star">*</span>
                 </td>
-                <td><input type="email" id="email" required></td>
+                <td><input type="email" id="email" required class="user-email">
+                <p class="error">Not valid email</p>
+                </td>
+                
             </tr>
             <tr>
                 <td style="vertical-align: top;"> 
                     <label for="description" style="vertical-align: top;">Description:</label>
                 </td>
-                <td><textarea name="description" id="description" cols="25" rows="5"></textarea></td>
+                <td><textarea name="description" id="description" required cols="25" rows="5"></textarea></td>
             </tr>
             <tr>
                 <td>

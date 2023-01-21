@@ -1,7 +1,9 @@
 * {
     padding: 0;
     margin: 0;
+    
 }
+
 .container {
     display: grid;
     grid-template-columns: 385px auto;
