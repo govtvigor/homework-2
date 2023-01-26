@@ -6,8 +6,29 @@ textarea {
     border: none;
 }
 .main-block {
+    
+    border: 2px solid black;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.phone-block {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.address-block {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.caption-contact {
+    border-right: 2px solid black;
     text-align: center;
 }
+.text-detail {
+    text-align: center;
+}
+
 .red-star {
     color: red;
 }
@@ -54,5 +75,9 @@ input[type=submit]:hover {
 }
 form {
     max-width: 1024px;
-    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
