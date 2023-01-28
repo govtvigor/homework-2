@@ -3,6 +3,16 @@
     margin: 0;
     
 }
+.main-theme {
+    --color-main-heading: #1E1E1E;
+    --color-main-text: #263036;
+    --color-main-links: #1C2E8C;
+    --color-main-background-left-side: #86A3B4;
+    --margin-after-heading: 30px;
+    --margin-between-blocks: 50px;
+    --margin-between-sidebars: 50px;
+}
+
 body {
     font-family: 'Inter', Arial, sans-serif;
 }
@@ -11,7 +21,7 @@ body {
     grid-template-columns: 385px auto;
 }
 .left-side-block {
-    background-color: #86A3B4;
+    background-color: var(--color-main-background-left-side);
     border: 1px solid;
     height: 100%;
     /* position: fixed; */
@@ -41,7 +51,7 @@ linear-gradient(0deg, #1E1E1E, #1E1E1E);
     color: white;
 }
 .my-surname {
-    color: #1C2E8C;
+    color: var(--color-main-links);
 }
 .cv-photo {
     width: 100%;
@@ -56,7 +66,7 @@ linear-gradient(0deg, #1E1E1E, #1E1E1E);
     margin-left: 40px;
     font-weight: 600;
     margin-top: 50px;
-    color: #263036;
+    color: var(--color-main-text);
 }
 .caption-contact {
     font-size: 2em;
@@ -67,7 +77,7 @@ linear-gradient(0deg, #1E1E1E, #1E1E1E);
     border-bottom: 6px solid #1E1E1E;
     height: 0;
     width: 289px;
-    background-color: #1E1E1E;
+    background-color: var(--color-main-heading);
 }
 .contact-details {
     font-style: normal;
@@ -95,7 +105,8 @@ a {
 .caption-languages {
     font-size: 2em;
     line-height: 39px;
-    color: #263036;
+    color: var(--color-main-text);
+
 }
 .name-of-language {
     list-style-type: none;
@@ -103,7 +114,7 @@ a {
 }
 .text-name-language {
     font-size: 20px;
-    color: #1E1E1E;
+    color: var(--color-main-heading);
     line-height: 24px;
     margin-top: 5px;
 }
@@ -112,24 +123,25 @@ a {
     border-bottom: 5px solid black;
     height: 0;
     background-color: black;
-    margin-top: 28px;
+    margin-top: var(--margin-after-heading);
 }
 .summary-block {
     
     font-style: normal;
     font-weight: 600;
-    margin-left: 55px;
-    margin-top: 58px;
-    color: #1E1E1E;
+    margin-left: var(--margin-between-sidebars);
+    margin-top: var(--margin-between-blocks);
+    color: var(--color-main-heading);
 }
 .caption-summary {  
     font-size: 36px;
     line-height: 44px;
 }
 .summary-text {
-    margin-top: 28px;
+    margin-top: var(--margin-after-heading);
     font-size: 1em;
     line-height: 19px;
+    color: var(--color-main-text);
 }
 .skills-block {
     width: 659px;
@@ -137,34 +149,41 @@ a {
 .name-of-skills {
    display: grid;
    grid-template-columns: 50% 50%;
-    margin-left: 55px;
-    margin-top: 26px;
+    margin-left: var(--margin-between-sidebars);
+    margin-top: var(--margin-between-blocks);
 }
 .list-of-skills {
+    color: var(--color-main-text);
     line-height: 19px;
     font-size: 1em;
 }
 .about-experience {
     font-size: 14px;
-    margin-top: 31px;
+    color: var(--color-main-text);
+    margin-top: var(--margin-after-heading);
     line-height: 17px;
 }
 .work-experience-block {
     width: 706px;
-    margin-top: 58px;
-    margin-left: 55px;
+    color: var(--color-main-heading);
+    margin-top: var(--margin-between-blocks);
+    margin-left: var(--margin-between-sidebars);
 }
 .usual-font-style {
     font-style: normal;
     font-weight: 600;
 }
 .education-block {
-    margin-top: 58px;
-    margin-left: 55px;
+    margin-top: var(--margin-between-blocks);
+    margin-left: var(--margin-between-sidebars);
     line-height: 19px;
+    color: var(--color-main-heading);   
 }
 .education-about {
-    margin-top: 28px;
+    margin-top: var(--margin-after-heading);
     font-size: 16px;
+    color: var(--color-main-text);
 }
+
+
 
