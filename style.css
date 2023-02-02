@@ -18,24 +18,46 @@ body {
 }
 .container {
     display: grid;
-    grid-template-columns: 385px auto;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    "leftside"
+    "rightside"
+    ;
 }
 .left-side-block {
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr 2fr;
+    grid-template-areas: 
+    "name"
+    "cvPhoto"
+    "contact"
+    "language"
+    ;
     background-color: var(--color-main-background-left-side);
     border: 1px solid;
     height: 100%;
-    /* position: fixed; */
     top: 0;
     left: 0;
 border-image-source: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
 linear-gradient(0deg, #1E1E1E, #1E1E1E);
 }
-.right-side-block {
+.right-side-block { 
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "summary"
+    "skills"
+    "workExp"
+    "education"
+    ;
+    grid-area: rightside;
+    background-color: white;
     position: absolute;
     left:  385px;          
 
 }
 .name {
+    grid-area: name;
     width: 260px;
     height: 96px;
     padding-left: 40px;
@@ -54,6 +76,7 @@ linear-gradient(0deg, #1E1E1E, #1E1E1E);
     color: var(--color-main-links);
 }
 .cv-photo {
+    grid-area: cvPhoto;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -62,6 +85,7 @@ linear-gradient(0deg, #1E1E1E, #1E1E1E);
     width: 320px;
 }   
 .contact-block {
+    grid-area: contact;
     width: 334px;
     margin-left: 40px;
     font-weight: 600;
@@ -97,6 +121,7 @@ a {
     margin-top: 11px;
 }
 .languages-block {
+    grid-area: language; 
     padding-left: 40px;
     font-style: normal;
     font-weight: 600;
@@ -126,7 +151,7 @@ a {
     margin-top: var(--margin-after-heading);
 }
 .summary-block {
-    
+    grid-area: summary;
     font-style: normal;
     font-weight: 600;
     margin-left: var(--margin-between-sidebars);
@@ -144,6 +169,7 @@ a {
     color: var(--color-main-text);
 }
 .skills-block {
+    grid-area: skills;
     width: 659px;
 }
 .name-of-skills {
@@ -164,6 +190,7 @@ a {
     line-height: 17px;
 }
 .work-experience-block {
+    grid-area: workExp;
     width: 706px;
     color: var(--color-main-heading);
     margin-top: var(--margin-between-blocks);
@@ -174,6 +201,7 @@ a {
     font-weight: 600;
 }
 .education-block {
+    grid-area: education;
     margin-top: var(--margin-between-blocks);
     margin-left: var(--margin-between-sidebars);
     line-height: 19px;
@@ -185,5 +213,25 @@ a {
     color: var(--color-main-text);
 }
 
+
+@media  screen and (max-width: 550px) {
+    
+    .container {
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: .4fr .4fr .4fr .4fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "name"
+        "cvPhoto"
+        "contact"
+        "language"
+        "summary"
+        "skills"
+        "workExp"
+        "education"
+        ;
+    }
+    
+}
 
 
