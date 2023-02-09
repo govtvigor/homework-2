@@ -19,20 +19,12 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-areas: 
-    "leftside"
-    "rightside"
-    ;
 }
 .left-side-block {
     display: grid;
+    animation: bottomToUpLeftBlock 1s;
     grid-template-rows: 1fr 3fr 3fr 2fr;
-    grid-template-areas: 
-    "name"
-    "cvPhoto"
-    "contact"
-    "language"
-    ;
+    
     background-color: var(--color-main-background-left-side);
     border: 1px solid;
     box-shadow: 2px 2px 6px black;
@@ -44,13 +36,10 @@ linear-gradient(0deg, #1E1E1E, #1E1E1E);
 }
 .right-side-block { 
     display: grid;
+    animation: bottomToUpRightBlock 1.5s;
+    transition: opacity 1s ease-in-out;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "summary"
-    "skills"
-    "workExp"
-    "education"
-    ;
+   
     grid-area: rightside;
     background-color: white;
     position: absolute;
@@ -58,7 +47,6 @@ linear-gradient(0deg, #1E1E1E, #1E1E1E);
 
 }
 .name {
-    grid-area: name;
     width: 260px;
     height: 96px;
     padding-left: 40px;
@@ -77,7 +65,7 @@ linear-gradient(0deg, #1E1E1E, #1E1E1E);
     color: var(--color-main-links);
 }
 .cv-photo {
-    grid-area: cvPhoto;
+    
     width: 100%;
     display: flex;
     justify-content: center;
@@ -86,7 +74,7 @@ linear-gradient(0deg, #1E1E1E, #1E1E1E);
     width: 320px;
 }   
 .contact-block {
-    grid-area: contact;
+   
     width: 334px;
     margin-left: 40px;
     font-weight: 600;
@@ -122,7 +110,7 @@ a {
     margin-top: 11px;
 }
 .languages-block {
-    grid-area: language; 
+    
     padding-left: 40px;
     font-style: normal;
     font-weight: 600;
@@ -152,7 +140,6 @@ a {
     margin-top: var(--margin-after-heading);
 }
 .summary-block {
-    grid-area: summary;
     font-style: normal;
     font-weight: 600;
     margin-left: var(--margin-between-sidebars);
@@ -170,7 +157,6 @@ a {
     color: var(--color-main-text);
 }
 .skills-block {
-    grid-area: skills;
     width: 659px;
 }
 .name-of-skills {
@@ -186,12 +172,12 @@ a {
 }
 .about-experience {
     font-size: 14px;
+    opacity: 0.7;
     color: var(--color-main-text);
     margin-top: var(--margin-after-heading);
     line-height: 17px;
 }
 .work-experience-block {
-    grid-area: workExp;
     width: 706px;
     color: var(--color-main-heading);
     margin-top: var(--margin-between-blocks);
@@ -202,7 +188,6 @@ a {
     font-weight: 600;
 }
 .education-block {
-    grid-area: education;
     margin-top: var(--margin-between-blocks);
     margin-left: var(--margin-between-sidebars);
     line-height: 19px;
@@ -215,14 +200,45 @@ a {
 }
 
 .cv-image:hover {
-    transform: scaleX(1.5);
+    transform: scale(1.2);
+    transition: .5s ease-in-out;
 }
-.work-place {
-    opacity: .7;
-}
-.work-place:hover {
+
+.about-experience:hover {
     opacity: 1;
     cursor: pointer;
+    transition: .5s ease-in-out ;
+}
+.hire-me-link-block {
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 7px;
+    width: 70px;
+    text-align: center;
+    background-color: rgb(157, 157, 235);
+    color: black;
+    margin-left: var(--margin-between-sidebars);
+}
+
+@keyframes bottomToUpLeftBlock {
+    from {
+        transform: translatey(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes bottomToUpRightBlock {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @media  screen and (max-width: 550px) {
@@ -230,20 +246,48 @@ a {
     .cv-image:hover {
         transform: scale(1);
     }
-    .container {
-        height: 100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: .4fr .4fr .4fr .4fr 1fr 1fr 1fr 1fr;
+    .name {
+        grid-area: name;
+    }
+    .cv-photo {
+        grid-area: cvPhoto;
+    }
+    .contact-block {
+        grid-area: contact;
+    }
+    .languages-block {
+        grid-area: language;
+    }
+    .left-side-block {
         grid-template-areas: 
-        "name"
-        "cvPhoto"
-        "contact"
-        "language"
+    "name"
+    "cvPhoto"
+    "contact"
+    "language"
+    ;
+    }
+    .summary-block {
+        grid-area: summary;
+    }
+    .skills-block {
+        grid-area: skills;
+    }
+    .work-experience-block {
+        grid-area: workExp;
+    }
+    .education-block {
+        grid-area: education;
+    }
+    .right-side-block {
+        grid-template-areas: 
         "summary"
         "skills"
         "workExp"
         "education"
         ;
+    }
+    .container {
+        grid-template-columns: 1fr;
     }
     
 }
