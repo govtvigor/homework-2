@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact information</title>
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 
@@ -26,44 +27,45 @@
     </div>
 
     <form action="mailto:govtvianigor@gmail.com" method="get">
-
+        
         <fieldset>
             <legend>Contact form</legend>
-            <table>
-            <tr>
-                <td>
-                    <label for="email">Email:</label> <span class="red-star">*</span>
-                </td>
-                <td><input type="email" id="email" required class="user-email">
-                <p class="error">Not valid email</p>
-                </td>
+
+            
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email: </label>
                 
-            </tr>
-            <tr>
-                <td style="vertical-align: top;"> 
-                    <label for="description" style="vertical-align: top;">Description:</label>
-                </td>
-                <td><textarea name="description" id="description" required cols="25" rows="5"></textarea></td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="work-type">Work type:</label>
-                </td>
-                <td>
-                    <select name="work-type" id="work-type">
-                        <option value="full-time">Full-time</option>
-                        <option value="remote-job">Remote job</option>
-                        <option value="one-time-project">One-time project</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <input type="submit" value="Hire me">
-                </td>
-            </tr>
-            </table>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control is-invalid" id="inputEmail3" placeholder="Email" required>
+                  <div class="invalid-feedback">
+                    Invalid email
+                  </div>
+                  
+                </div>
+              </div>
+
+             
+            
+
+            <div class="form-group row justify-content-between">
+                <label class="col-sm-4" for="description">Description:</label>
+                <textarea class="form-control col-sm-8" id="description" rows="5" cols="25" required></textarea>
+              </div>
+
+           
+            <div class="form-group row-sm-2">
+                <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+                    <option selected>Work type:</option>
+                    <option value="full-time">Full-time</option>
+                    <option value="remote-job">Remote job </option>
+                    <option value="one-time-project">One-time project</option>
+                </select>
+              </div>
+
+
+            <button class="btn btn-primary" type="submit">Hire me</button>
         </fieldset>
+    
     </form>
 </body>
 </html>
